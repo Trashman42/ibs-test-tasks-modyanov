@@ -5,7 +5,7 @@ class Animal:
 
 class Dog(Animal):
     def voice(self):
-        print('Dog goes woof')
+        return 'Dog goes woof'
 
 
 class Cat(Animal):
@@ -28,7 +28,8 @@ class Fox(Animal):
         print('What does the fox say?')
 
 
-Dog().voice()
+dog = Dog().voice()
+print(dog)
 Cat().voice()
 Bird().voice()
 Mouse().voice()
