@@ -7,9 +7,10 @@ class Animal:
     def voice(self):
         pass
 
+    def num_inst():
+        print(f'Number of instance: {Animal.cnt}')
 
-def num_inst():
-    return f'Number of instance: {Animal.cnt}'
+    num_inst = staticmethod(num_inst)
 
 
 class Dog(Animal):
@@ -45,7 +46,7 @@ class FoxSay(Fox):
         Joff-tchoff-tchoff-tchoffo-tchoffo-tchoff!''')
 
 
-print(num_inst(), '\n')
+Animal.num_inst()
 a = Dog().voice()
 print(a)
 Cat().voice()
@@ -54,4 +55,4 @@ Mouse().voice()
 Fox().voice()
 fox = FoxSay()
 fox.voice()
-print('\n', num_inst())
+Animal.num_inst()
